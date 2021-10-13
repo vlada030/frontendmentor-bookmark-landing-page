@@ -1,0 +1,64 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 40px 32px;
+
+    @include media(desktop) {
+        padding: 48px 165px 48px 171px;
+    }
+
+    .logo {
+        height: 25px;
+    }
+
+    .links {
+        display: none;
+
+        @include media(desktop) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            list-style: none;
+
+            li {
+                padding: 0 22px;
+
+                a, a:visited {
+                    color: $colorBlack;
+                    font-size: 13px;
+                    line-height: 17px;
+                    text-transform: uppercase;
+                    letter-spacing: 1.5px;
+                    text-decoration: none;
+                    transition: all 0.2s;
+                }
+
+                a:hover, a:active {
+                    color: $colorRed;
+                }
+
+            }
+
+        }
+    }
+
+    .menu-btn {
+        border: none;
+
+        display: grid;
+        place-items: center;
+
+        @include media(desktop) {
+            display: none;
+        }
+
+        img {
+            width: 18px;
+            height: 15px;
+            fill: inherit;
+        }
+    }
+}
