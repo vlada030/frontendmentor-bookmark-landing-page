@@ -1,8 +1,7 @@
-.nav {
+.top-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 40px 32px;
 
     @include media(desktop) {
@@ -24,7 +23,11 @@
             list-style: none;
 
             li {
-                padding: 0 22px;
+                padding: 0 24px;
+
+                &:first-of-type {
+                    padding: 0 20px;
+                }
 
                 a, a:visited {
                     color: $colorBlack;
@@ -61,4 +64,104 @@
             fill: inherit;
         }
     }
+}
+
+.mobnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($colorBlack, 0.95);
+    backdrop-filter: blur(32.6194px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 40px 34px 48px 32px;
+
+    &-header {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 40px;
+
+        .logo {
+            width: 148px;
+            height: 25px;
+        }
+
+        button {
+            height: 15px;
+            width: 15px;
+            border: none;
+            background-color: transparent;
+
+            img {
+                height: 15px;
+                width: 15px;
+            }
+        }
+    }
+
+    .links {
+        list-style: none;
+
+        li {
+            text-align: center;
+            border-top: 1px solid rgba($colorWhitePure, 0.15);
+            padding: 24px 0;
+
+            &:nth-child(4) {
+                padding-top: 24px;
+            }
+
+            a {
+                font-size: 20px;
+                color: $colorWhitePure;
+                letter-spacing: 2.31px;
+
+                line-height: 0px;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+
+            button {
+                display: block;
+                width: 100%;
+
+                color: $colorWhitePure;
+                font-size: 20px;
+                font-weight: $fontWeightBold;
+                letter-spacing: 2.31px;
+                line-height: 17px;
+
+                border: 2px solid $colorWhitePure;
+                border-radius: 5px;
+                background-color: transparent;
+                text-transform: uppercase;
+
+                padding: 16px 0 15px 0;
+            }
+        }
+    }
+
+    .socials {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 24px;
+            height: 24px;
+
+            &:last-of-type {
+                height: auto;
+                margin-left: 40px;
+            }
+        }
+    }    
 }

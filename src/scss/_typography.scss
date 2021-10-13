@@ -17,7 +17,21 @@
     text-transform: uppercase;
 
     background-color: $colorRed;
-    border-radius: 8px;
-    box-shadow: 0px 8px rgba(73, 93, 207, 0.2);
+    border: 2px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.20012);
+    cursor: pointer;
     padding: 10px 31px 10px 31px;
+
+    transition: all 0.2s;
+
+    &:hover {
+        background-color: $colorWhitePure;
+        color: $colorRed;
+        border: 2px solid $colorRed;
+    }
+}
+
+.disabled {
+    display: none !important;
 }
