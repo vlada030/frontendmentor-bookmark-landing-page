@@ -82,6 +82,15 @@
 
     padding: 40px 34px 48px 32px;
 
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.2s;
+    
+    &.animate {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
     &-header {
 
         display: flex;
@@ -114,17 +123,14 @@
             text-align: center;
             border-top: 1px solid rgba($colorWhitePure, 0.15);
             padding: 24px 0;
-
-            &:nth-child(4) {
-                padding-top: 24px;
-            }
+            line-height: 17px;
 
             a {
                 font-size: 20px;
                 color: $colorWhitePure;
                 letter-spacing: 2.31px;
+                line-height: 15px;
 
-                line-height: 0px;
                 text-transform: uppercase;
                 text-decoration: none;
             }
@@ -144,7 +150,7 @@
                 background-color: transparent;
                 text-transform: uppercase;
 
-                padding: 16px 0 15px 0;
+                padding: 14px 0 13px 0;
             }
         }
     }
