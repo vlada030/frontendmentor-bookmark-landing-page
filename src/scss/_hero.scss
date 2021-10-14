@@ -3,23 +3,72 @@
 .main {
     margin-bottom: 140px;
 
+    @include media(desktop) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: flex-end;
+        padding-left: 165px;
+        margin-bottom: 80px;
+    }
     .hero {
-        background: linear-gradient($colorBlue, $colorBlue) 75px 60px / 100%
-            100%;
-        background-repeat: no-repeat;
+        // background:
+        // linear-gradient($colorBlue, $colorBlue) 75px 60px / 100% 100%;
+        // background-repeat: no-repeat;
 
         margin-bottom: 48px;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 60px;
+            left: 80px;
+            height: 195px;
+            width: 120%;
+            background-color: $colorBlue;
+            border-bottom-left-radius: 30%;
+            border-top-left-radius: 30%;
+            z-index: -1;
+        }
 
         img {
-            width: 375px;
+            width: 355px;
             display: block;
             margin: 0 auto;
+        }
+
+        @include media(desktop) {
+            height: 495px;
+            width: 705px;
+            margin-bottom: 0;
+
+            &::before {
+                top: 165px;
+                left: 190px;
+                height: 330px;
+                width: 100%;
+            }
+
+            img {
+                width: 640px;
+                margin: 0;
+                margin-top: 25px;
+            }
         }
     }
 
     .hero-text {
         padding: 0 32px;
         text-align: center;
+
+        @include media(desktop) {
+            width: 540px;
+            text-align: left;
+            padding: 0;
+            margin-right: 30px;
+        }
 
         h1 {
             font-size: 30px;
@@ -28,12 +77,43 @@
             line-height: 40px;
             letter-spacing: -0.09px;
             margin-bottom: 16px;
+
+            @include media(desktop) {
+                font-size: 48px;
+                line-height: 52px;
+                letter-spacing: -0.15px;
+                margin-bottom: 24px;
+            }
         }
 
         p {
             margin-bottom: 32px;
             letter-spacing: -0.09px;
+
+            @include media(desktop) {
+                font-size: 18px;
+                line-height: 28px;
+                letter-spacing: -0.15px;
+                margin-bottom: 32px;
+            }
         }
 
+        .wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            a:first-of-type {
+                margin-right: 14px;
+            }
+
+            @include media(desktop) {
+                justify-content: flex-start;
+
+                a:first-of-type {
+                    margin-right: 16px;
+                }
+            }
+        }
     }
 }

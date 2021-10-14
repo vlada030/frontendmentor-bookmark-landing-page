@@ -4,7 +4,7 @@
     margin: 0 auto;
 
     @include media(desktop) {
-        width: 1200px;
+        width: 1440px;
     }
 }
 
@@ -41,16 +41,31 @@
 
     border-radius: 5px;
     box-shadow: $boxShadow;
-    padding: 10px 16px 10px 17px;
+    padding: 8.5px 14.5px 8.5px 15.5px;
 
     &--blue {
         background-color: $colorBlue;
-        color: $colorWhitePure;       
-
+        color: $colorWhitePure;   
+        border: 2px solid $colorBlue;    
     }
 
     &--white {
-        color: $colorBlack;
+        color: rgba($colorBlack, 0.75);
+        border: 2px solid transparent;
+    }
+
+    @include media(desktop) {
+        padding: 8.5px 22.5px;
+        transition: all 0.2s;
+
+        &--blue:hover {
+            background-color: transparent;
+            color: $colorBlue;
+        }
+
+        &--white:hover {
+            border: 2px solid rgba($colorBlack, 0.75);
+        }
     }
 }
 
