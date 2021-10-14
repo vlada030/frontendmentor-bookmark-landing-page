@@ -1,0 +1,39 @@
+// koriscenje gradienta za crtanje oblika u backgroundu
+// https://css-tricks.com/drawing-images-with-css-gradients/
+.main {
+    margin-bottom: 140px;
+
+    .hero {
+        background: linear-gradient($colorBlue, $colorBlue) 75px 60px / 100%
+            100%;
+        background-repeat: no-repeat;
+
+        margin-bottom: 48px;
+
+        img {
+            width: 375px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    .hero-text {
+        padding: 0 32px;
+        text-align: center;
+
+        h1 {
+            font-size: 30px;
+            color: $colorBlack;
+            font-weight: $fontWeightBold;
+            line-height: 40px;
+            letter-spacing: -0.09px;
+            margin-bottom: 16px;
+        }
+
+        p {
+            margin-bottom: 32px;
+            letter-spacing: -0.09px;
+        }
+
+    }
+}
