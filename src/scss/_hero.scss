@@ -19,6 +19,7 @@
         margin-bottom: 48px;
         position: relative;
         overflow: hidden;
+        z-index: 5;
 
         &::before {
             content: "";

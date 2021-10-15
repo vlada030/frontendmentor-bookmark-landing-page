@@ -115,24 +115,36 @@
         .card-header {
             height: 238px;
             margin-bottom: 32px;
-            position: relative;
             overflow: hidden;
+            position: relative;
+            z-index: 5;
 
             &::before {
-                content: '';
+                content: "";
                 position: absolute;
-                top: 100px;
-                right: 150px;
-                height: 150px;
+                top: 35px;
+                right: 70px;
+                height: 200px;
                 width: 100%;
-                
+
                 background-color: $colorBlue;
+                border-bottom-right-radius: 25%;
+                border-top-right-radius: 25%;
                 z-index: -1;
+            }
+
+            &.tab-2::before {
+                right: 135px;
+            }
+
+            &.tab-3::before {
+                right: 115px;
             }
 
             img {
                 display: block;
-                width: 311px;
+                //width: 311px;
+                height: 200px;
                 margin: 0 auto;
             }
         }
@@ -150,10 +162,11 @@
             }
 
             p {
-                margin-bottom: 15px;
+                margin-bottom: 25px;
             }
 
             a {
+                padding: 0;
                 padding: 14px 22.5px;
             }
         }
