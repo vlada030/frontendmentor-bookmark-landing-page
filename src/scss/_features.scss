@@ -66,6 +66,7 @@
             @include media(desktop) {
                 width: 243px;
                 border-top: none;
+                border-bottom: 1px solid rgba(73, 93, 207, 0.2001);
                 cursor: pointer;
 
                 &:hover button {
@@ -94,6 +95,8 @@
                 border: none;
                 padding: 20.5px 0 16px 0;
 
+                transition: all 0.2s;
+
                 @include media(desktop) {
                     padding: 0;
                     padding-bottom: 26px;
@@ -111,6 +114,14 @@
 
     .card {
         margin-bottom: 77px;
+
+        @include media(desktop) {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            margin-bottom: 149px;
+        }
 
         .card-header {
             height: 238px;
@@ -141,11 +152,32 @@
                 right: 115px;
             }
 
+            @include media(desktop) {
+                height: 435px;
+                width: 705px;
+                margin: 0;
+                margin-right: 125px;
+
+                &::before {
+                    top: 80px;
+                    right: 80px;
+                    height: 355px;
+                    border-bottom-right-radius: 33%;
+                    border-top-right-radius: 25%;
+                }
+            }
+
             img {
                 display: block;
                 //width: 311px;
                 height: 200px;
                 margin: 0 auto;
+
+                @include media(desktop) {
+                    margin: 0;
+                    margin-left: auto;
+                    height: 346px;
+                }
             }
         }
 
@@ -153,21 +185,53 @@
             text-align: center;
             padding: 0 32px;
 
+            @include media(desktop) {
+                padding: 0;
+                height: 232px;
+                width: 445px;
+                text-align: left;
+
+                align-self: flex-start;
+                margin-top: 57px;
+
+            }
+
             h3 {
                 font-size: 24px;
                 color: $colorBlack;
                 font-weight: $fontWeightBold;
                 line-height: 52px;
                 letter-spacing: -0.08px;
+
+                @include media(desktop) {
+                    font-size: 32px;
+                    letter-spacing: -0.1px;
+                    margin-bottom: 16px;
+                }
             }
 
             p {
-                margin-bottom: 25px;
+                margin-bottom: 15px;
+
+                @include media(desktop) {
+                    font-size: 18px;
+                    line-height: 28px;
+                    margin-bottom: 32px;
+                }
             }
 
-            a {
-                padding: 0;
-                padding: 14px 22.5px;
+            button {
+                font-size: 14px;
+                color: $colorWhitePure;
+                font-weight: $fontWeightBold;
+                line-height: 28px;
+                letter-spacing: 0.25px;
+
+                background-color: $colorBlue;
+                border-radius: 5px;
+                cursor: pointer;
+                
+                padding: 8.5px 24px;
             }
         }
     }

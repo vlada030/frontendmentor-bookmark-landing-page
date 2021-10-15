@@ -18,11 +18,14 @@ featureButtons.forEach(button => {
         })
 
         document.querySelectorAll('.card').forEach(elem => {
-            console.log(elem);
             elem.classList.toggle('disabled', true)
         })
 
-        // e.target
+        const clickedElem = e.target.closest('li')
+        const elemID = clickedElem.dataset.section
+        
+        document.getElementById(elemID).classList.toggle('disabled', false)
+        clickedElem.classList.toggle('active', true)
     })
 })
 
