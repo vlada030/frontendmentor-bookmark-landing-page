@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 40px 32px;
+    margin-bottom: 40px;
 
     @include media(desktop) {
         padding: 48px 165px 48px 171px;

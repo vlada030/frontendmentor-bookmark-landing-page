@@ -1,0 +1,161 @@
+.feature {
+    &-header {
+        text-align: center;
+        padding: 0 32px;
+        margin-bottom: 40px;
+
+        h2 {
+            font-size: 24px;
+            color: $colorBlack;
+            font-weight: $fontWeightBold;
+            line-height: 52px;
+            letter-spacing: -0.08px;
+        }
+
+        @include media(desktop) {
+            padding: 0;
+            width: 540px;
+            margin: 0 auto;
+            margin-bottom: 72px;
+
+            h2 {
+                font-size: 32px;
+                line-height: 52px;
+                letter-spacing: -0.1px;
+                margin-bottom: 16px;
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+    }
+
+    &-btn-list {
+        list-style: none;
+        text-align: center;
+
+        padding: 0 32px;
+        margin-bottom: 72px;
+
+        @include media(desktop) {
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        li {
+            border-top: 1px solid rgba(73, 93, 207, 0.2001);
+
+            &:last-child {
+                border-bottom: 1px solid rgba(73, 93, 207, 0.2001);
+            }
+
+            &.active {
+                button {
+                    color: rgba($colorBlack, 0.1);
+                }
+
+                p {
+                    background-color: $colorRed;
+                }
+            }
+
+            @include media(desktop) {
+                width: 243px;
+                border-top: none;
+                cursor: pointer;
+
+                &:hover button {
+                    color: $colorRed;
+                    cursor: pointer;
+                }
+
+                &.active {
+                    button {
+                        color: rgba($colorBlack, 0.75);
+                    }
+
+                    p {
+                        width: 100%;
+                    }
+                }
+            }
+
+            button {
+                font-size: 16px;
+                color: rgba($colorBlack, 0.75);
+                line-height: 17px;
+                letter-spacing: 0.53px;
+
+                background-color: transparent;
+                border: none;
+                padding: 20.5px 0 16px 0;
+
+                @include media(desktop) {
+                    padding: 0;
+                    padding-bottom: 26px;
+                }
+            }
+
+            p {
+                background-color: transparent;
+                height: 4px;
+                width: 143px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .card {
+        margin-bottom: 77px;
+
+        .card-header {
+            height: 238px;
+            margin-bottom: 32px;
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 100px;
+                right: 150px;
+                height: 150px;
+                width: 100%;
+                
+                background-color: $colorBlue;
+                z-index: -1;
+            }
+
+            img {
+                display: block;
+                width: 311px;
+                margin: 0 auto;
+            }
+        }
+
+        .card-body {
+            text-align: center;
+            padding: 0 32px;
+
+            h3 {
+                font-size: 24px;
+                color: $colorBlack;
+                font-weight: $fontWeightBold;
+                line-height: 52px;
+                letter-spacing: -0.08px;
+            }
+
+            p {
+                margin-bottom: 15px;
+            }
+
+            a {
+                padding: 14px 22.5px;
+            }
+        }
+    }
+}
