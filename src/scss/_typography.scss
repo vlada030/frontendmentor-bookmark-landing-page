@@ -36,6 +36,7 @@
 }
 
 .btn {
+    display: inline-block;
     font-size: 13px;
     color: $colorWhitePure;
     font-weight: $fontWeightBold;
@@ -60,15 +61,16 @@
 }
 
 .btn-link {
+    display: block;
     text-decoration: none;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: $fontWeightBold;
     letter-spacing: 0.25px;
     line-height: 28px;
 
     border-radius: 5px;
     box-shadow: $boxShadow;
-    padding: 8px 14.5px 8px 15.5px;
+    padding: 8.5px 14.5px 8.5px 15.5px;
 
     &--blue {
         background-color: $colorBlue;
@@ -82,7 +84,7 @@
     }
 
     @include media(desktop) {
-        padding: 8px 22.5px;
+        padding: 8.5px 22.5px;
         transition: all 0.2s;
 
         &--blue:hover {

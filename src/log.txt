@@ -1,3 +1,4 @@
 postavke - 1h
 navigacija - 2h
-background shape - 1h
+background shape - 4.5h
+feature - 1.5h
