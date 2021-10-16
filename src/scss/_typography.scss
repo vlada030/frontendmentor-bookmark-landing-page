@@ -9,6 +9,32 @@
     }
 }
 
+.title {
+    font-size: 24px;
+    color: $colorBlack;
+    font-weight: $fontWeightBold;
+    line-height: 52px;
+    letter-spacing: -0.075px;
+
+    @include media(desktop) {
+            font-size: 32px;
+            line-height: 52px;
+            letter-spacing: -0.1px;
+    }
+}
+
+.text {
+    font-size: 15px;
+    color: rgba($colorBlack, 0.5);
+    font-weight: $fontWeightDefault;
+    line-height: 25px;
+
+    @include media(desktop) {
+            font-size: 18px;
+            line-height: 28px;
+    }
+}
+
 .btn {
     font-size: 13px;
     color: $colorWhitePure;
@@ -69,7 +95,6 @@
         }
     }
 }
-
 
 .disabled {
     display: none !important;

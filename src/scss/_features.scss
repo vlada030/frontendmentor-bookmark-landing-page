@@ -2,32 +2,17 @@
     &-header {
         text-align: center;
         padding: 0 32px;
-        margin-bottom: 40px;
-
-        h2 {
-            font-size: 24px;
-            color: $colorBlack;
-            font-weight: $fontWeightBold;
-            line-height: 52px;
-            letter-spacing: -0.08px;
-        }
+        margin-bottom: 40px;   
 
         @include media(desktop) {
             padding: 0;
             width: 540px;
             margin: 0 auto;
-            margin-bottom: 72px;
-
-            h2 {
-                font-size: 32px;
-                line-height: 52px;
-                letter-spacing: -0.1px;
+            margin-bottom: 72px; 
+            
+            h2 {               
                 margin-bottom: 16px;
-            }
-
-            p {
-                font-size: 18px;
-                line-height: 28px;
+                
             }
         }
     }
@@ -139,17 +124,21 @@
                 width: 100%;
 
                 background-color: $colorBlue;
-                border-bottom-right-radius: 25%;
-                border-top-right-radius: 25%;
+                border-bottom-right-radius: 200px;
+                border-top-right-radius: 200px;
                 z-index: -1;
             }
 
             &.tab-2::before {
-                right: 135px;
+                right: 115px;
+                top: 35px;
+                height: 205px;
             }
 
             &.tab-3::before {
                 right: 115px;
+                top: 35px;
+                height: 205px;
             }
 
             @include media(desktop) {
@@ -164,6 +153,18 @@
                     height: 355px;
                     border-bottom-right-radius: 33%;
                     border-top-right-radius: 25%;
+                }
+
+                &.tab-2::before {
+                    right: 80px;
+                    top: 80px;
+                    height: 355px;
+                }
+    
+                &.tab-3::before {
+                    right: 80px;
+                    top: 80px;
+                    height: 355px;
                 }
             }
 
@@ -194,28 +195,16 @@
                 align-self: flex-start;
                 margin-top: 57px;
 
-            }
-
-            h3 {
-                font-size: 24px;
-                color: $colorBlack;
-                font-weight: $fontWeightBold;
-                line-height: 52px;
-                letter-spacing: -0.08px;
-
-                @include media(desktop) {
-                    font-size: 32px;
-                    letter-spacing: -0.1px;
+                h3 {
                     margin-bottom: 16px;
                 }
+
             }
 
             p {
                 margin-bottom: 15px;
 
                 @include media(desktop) {
-                    font-size: 18px;
-                    line-height: 28px;
                     margin-bottom: 32px;
                 }
             }
@@ -230,7 +219,7 @@
                 background-color: $colorBlue;
                 border-radius: 5px;
                 cursor: pointer;
-                
+
                 padding: 8.5px 24px;
             }
         }
