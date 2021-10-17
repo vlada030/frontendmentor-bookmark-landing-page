@@ -8,6 +8,15 @@ const simpleBtn = document.getElementById('simpleBtn')
 const speedyBtn = document.getElementById('speedyBtn')
 const easyBtn = document.getElementById('easyBtn')
 
+document.addEventListener('click', e => {
+    const elem = e.target.closest('.faq__item')
+
+    if (elem) {
+        elem.classList.toggle('open')
+    }
+})
+
+// TOGGLE TABS
 let featureButtons = [simpleBtn, speedyBtn, easyBtn]
 
 featureButtons.forEach(button => {
@@ -29,6 +38,8 @@ featureButtons.forEach(button => {
     })
 })
 
+
+// OPEN / CLOSE mobile menu
 let buttons = [closeMobMenu, openMobMenu]
 
 buttons.forEach(button => {
@@ -38,3 +49,4 @@ buttons.forEach(button => {
     
     })
 }); 
+

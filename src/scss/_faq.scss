@@ -1,0 +1,115 @@
+.faq {
+    padding: 0 32px 0 30px;
+    margin-bottom: 123px;
+
+    @include media(desktop) {
+        padding: 0;
+        width: 540px;
+        margin: 0 auto;
+        margin-bottom: 149px;
+    }
+
+    &__header {
+        text-align: center;
+        margin-bottom: 64px;
+
+        h3 {
+            line-height: 30px;
+            margin-bottom: 16px;
+        }
+
+        @include media(desktop) {
+            margin-bottom: 56px;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        margin-bottom: 54px;
+    }
+
+    &__item {
+        border-bottom: 1px solid rgba($colorBlack, 0.15);
+        padding: 20px 0 12px 0;
+
+        &.open {
+            p {
+                height: auto;
+                opacity: 1;
+                padding: 26px 0 16px 0;
+            }
+
+            svg {
+                transform: rotate(180deg);
+
+                path {
+                    stroke: $colorRed;
+                }
+            }
+        }
+
+        @include media(desktop) {
+            &:hover {
+                cursor: pointer;
+
+                h4 {
+                    color: $colorRed !important;
+                }
+            }
+        }
+
+        .wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h4 {
+                font-size: 15px;
+                color: $colorBlack;
+                font-weight: $fontWeightDefault;
+                line-height: 32px;
+
+                transition: all 0.2s;
+
+                @include media(desktop) {
+                    font-size: 18px;
+                }
+            }
+
+            svg {
+                width: 16px;
+                //overflow: visible;
+
+                transition: all 0.2s;
+            }
+        }
+
+        p {
+            font-size: 15px;
+            color: rgba($colorBlack, 0.75);
+            line-height: 30px;
+            letter-spacing: 0.15px;
+
+            padding-bottom: 14px 0 28px 0;
+
+            height: 0;
+            opacity: 0;
+            transition: all 0.2s;
+
+            pointer-events: none;
+
+            @include media(desktop) {
+                font-size: 16px;
+                line-height: 36px;
+            }
+        }
+    }
+
+    &__link {
+        @extend .btn-link;
+        @extend .btn-link--blue;
+        width: 114px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
