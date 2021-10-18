@@ -8,6 +8,25 @@ const simpleBtn = document.getElementById('simpleBtn')
 const speedyBtn = document.getElementById('speedyBtn')
 const easyBtn = document.getElementById('easyBtn')
 
+const form = document.getElementById('form')
+const EMAIL_PATTERN = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+// EMAIL FORM VALIDATION
+form.addEventListener('submit', e => {
+    e.preventDefault()
+
+    const inputEmail = document.getElementById('email').value
+    form.classList.toggle('error', false)
+
+    if (inputEmail === '' || !EMAIL_PATTERN.test(inputEmail)) {
+        form.classList.toggle('error', true)
+        return
+    }
+
+    console.log('DONE');
+})
+
+// OPEN/CLOSE FAQ ITEMS
 document.addEventListener('click', e => {
     const elem = e.target.closest('.faq__item')
 
@@ -16,7 +35,7 @@ document.addEventListener('click', e => {
     }
 })
 
-// TOGGLE TABS
+// TOGGLE FEATURE TABS
 let featureButtons = [simpleBtn, speedyBtn, easyBtn]
 
 featureButtons.forEach(button => {

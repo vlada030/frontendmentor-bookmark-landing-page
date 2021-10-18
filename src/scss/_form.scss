@@ -1,10 +1,20 @@
 .form-section {
-    padding: 60px 32px 38px 32px;
     background-color: $colorBlue;
+    padding: 60px 32px 38px 32px;
+
+    @include media(desktop) {
+        padding: 58px 0 52px 0;
+    }
 
     &__header {
         text-align: center;
         margin-bottom: 32px;
+
+        @include media(desktop) {
+            width: 423px;
+            margin: 0 auto;
+            margin-bottom: 36px;
+        }
 
         p {
             font-size: 12px;
@@ -14,6 +24,12 @@
             letter-spacing: 4.6px;
 
             text-transform: uppercase;
+
+            @include media(desktop) {
+                font-size: 13px;
+                letter-spacing: 5px;
+                margin-bottom: 24px;
+            }
         }
 
         h3 {
@@ -22,14 +38,55 @@
             font-weight: $fontWeightBold;
             letter-spacing: -0.08px;
             line-height: 28px;
+
+            @include media(desktop) {
+                font-size: 32px;
+                line-height: 40px;
+                letter-spacing: -0.1px;
+            }
         }
     }
 
     &__form {
+
+        @include media(desktop) {
+            width: 442px;
+            margin: 0 auto;
+
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;         
+
+        }
+
+        &.error {
+            input {
+                border: 2px solid #fa5959 !important;
+                border-bottom-left-radius: 0px !important;
+                border-bottom-right-radius: 0px !important;
+            }
+
+            img {
+                display: inline-block !important;
+            }
+
+            p {
+                visibility: visible !important;
+            }
+        }
+
         .wrapper {
             position: relative;
             margin-bottom: 16px;
+            
+            @include media(desktop) {
+                margin: 0;
+                margin-right: 16px;  
+                flex: 0 0 300px;        
+    
+            }
 
+            
             input {
                 display: block;
                 width: 100%;
@@ -39,9 +96,8 @@
                 letter-spacing: 0.25px;
 
                 border: 2px solid transparent;
-                border: 2px solid #FA5959;
                 border-radius: 5px;
-                padding: 8.5px 46px 8.5px 20px;
+                padding: 8px 46px 8px 20px;
 
                 &::placeholder {
                     opacity: 1;
@@ -58,6 +114,7 @@
                 top: 14px;
                 right: 14px;
                 height: 20px;
+                display: none;
             }
 
             p {
@@ -67,13 +124,45 @@
                 font-weight: $fontWeightBold;
                 line-height: 12px;
                 letter-spacing: 0.25px;
-                
+
                 background-color: $colorRed;
                 border-bottom-left-radius: 5px;
                 border-bottom-right-radius: 5px;
 
                 padding: 4px 10px 6px 12px;
+
+                visibility: hidden;
             }
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            font-size: 14px;
+            color: $colorWhitePure;
+            font-weight: $fontWeightBold;
+            letter-spacing: 0.25px;
+            line-height: 28px;
+            text-transform: capitalize;
+
+            background-color: $colorRed;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            box-shadow: $boxShadow;
+            cursor: pointer;
+            padding: 8px;
+
+            transition: all 0.2s;
+
+            &:hover {
+                background-color: $colorWhitePure;
+                color: $colorRed;
+                border: 2px solid $colorRed;
+            }
+
+            // @include media(desktop) {
+            //     width: 126px;
+            // }
         }
     }
 }
