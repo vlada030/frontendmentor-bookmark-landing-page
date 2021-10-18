@@ -108,6 +108,14 @@
                 margin-right: 13px;
             }
 
+            @include media(tablet) {
+                justify-content: center;
+                
+                a:first-of-type {
+                    margin-right: 30px;
+                }
+            }
+
             @include media(desktop) {
                 justify-content: flex-start;
 

@@ -59,7 +59,7 @@
                 a,
                 a:visited {
                     font-size: 13px;
-                    transition: all 0.2s;
+                    transition: $transition;
                 }
 
                 a:hover,
@@ -93,7 +93,7 @@
                 width: 24px;
     
                 path {
-                    transition: all 0.2s;
+                    transition: $transition;
                     fill: $colorWhitePure;
                 }               
             }

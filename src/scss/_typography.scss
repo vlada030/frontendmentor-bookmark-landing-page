@@ -4,8 +4,12 @@
     margin: 0 auto;
     background-color: $colorWhitePure;
 
+    @include media(tablet) {
+        width: 768px;
+    }
+
     @include media(desktop) {
-        width: 1440px;
+        width: 1200px;
     }
 }
 
@@ -50,7 +54,7 @@
     cursor: pointer;
     padding: 10px 31px 10px 31px;
 
-    transition: all 0.2s;
+    transition: $transition;
 
     &:hover {
         background-color: $colorWhitePure;
@@ -84,7 +88,7 @@
 
     @include media(desktop) {
         padding: 8px 22px;
-        transition: all 0.2s;
+        transition: $transition;
 
         &--blue:hover {
             background-color: transparent;

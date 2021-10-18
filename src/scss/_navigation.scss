@@ -38,7 +38,7 @@
                     text-transform: uppercase;
                     letter-spacing: 1.5px;
                     text-decoration: none;
-                    transition: all 0.2s;
+                    transition: $transition;
                 }
 
                 a:hover, a:active {
@@ -86,7 +86,7 @@
 
     transform: translateY(-100%);
     opacity: 0;
-    transition: all 0.2s;
+    transition: $transition;
 
     z-index: 50;
     
@@ -101,6 +101,12 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 40px;
+
+        @include media(tablet) {
+            width: 700px;
+            margin: 0 auto;
+            margin-bottom: 80px;
+        }
 
         .logo {
             width: 148px;
@@ -122,6 +128,11 @@
 
     .links {
         list-style: none;
+
+        @include media(tablet) {
+            width: 600px;
+            margin: 0 auto;
+        }
 
         li {
             text-align: center;
@@ -172,6 +183,10 @@
                 height: auto;
                 margin-left: 40px;
             }
+        }
+
+        @include media(tablet) {
+            
         }
     }    
 }

@@ -2,6 +2,11 @@
     background-color: $colorBlue;
     padding: 60px 32px 38px 32px;
 
+
+    @include media(tablet) {
+        padding: 58px 134px;
+    }
+
     @include media(desktop) {
         padding: 58px 0 52px 0;
     }
@@ -152,7 +157,7 @@
             cursor: pointer;
             padding: 8px;
 
-            transition: all 0.2s;
+            transition: $transition;
 
             &:hover {
                 background-color: $colorWhitePure;

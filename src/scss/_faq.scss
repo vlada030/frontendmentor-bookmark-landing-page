@@ -2,6 +2,10 @@
     padding: 0 32px 0 30px;
     margin-bottom: 123px;
 
+    @include media(tablet) {
+        padding: 0 84px;
+    }
+
     @include media(desktop) {
         padding: 0;
         width: 540px;
@@ -69,7 +73,7 @@
                 font-weight: $fontWeightDefault;
                 line-height: 32px;
 
-                transition: all 0.2s;
+                transition: $transition;
 
                 @include media(desktop) {
                     font-size: 18px;
@@ -80,7 +84,7 @@
                 width: 16px;
                 //overflow: visible;
 
-                transition: all 0.2s;
+                transition: $transition;
             }
         }
 
@@ -94,7 +98,7 @@
 
             height: 0;
             opacity: 0;
-            transition: all 0.2s;
+            transition: $transition;
 
             pointer-events: none;
 
