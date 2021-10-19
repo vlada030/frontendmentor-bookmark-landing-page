@@ -10,7 +10,7 @@
             margin: 0 auto;
             margin-bottom: 72px; 
             
-            h2 {               
+            h3 {               
                 margin-bottom: 16px;
                 
             }
@@ -78,13 +78,13 @@
 
                 background-color: transparent;
                 border: none;
-                padding: 20.5px 0 16px 0;
+                padding: 20px 0 16px 0;
 
                 transition: $transition;
 
                 @include media(desktop) {
                     padding: 0;
-                    padding-bottom: 26px;
+                    padding-bottom: 25px;
                 }
             }
 
